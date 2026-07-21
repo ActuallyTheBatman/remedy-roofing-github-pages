@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  padding-top: 96px;
+}
+
 [data-aos],
 [data-aos].aos-init,
 [data-aos].aos-animate {
@@ -23,6 +27,15 @@ body {
 section,
 footer {
   max-width: 100%;
+}
+
+.navbar.sticky-top {
+  left: 0;
+  position: fixed !important;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
 }
 
 /* Keep the homepage hero CTA centered like the original design. */
@@ -45,6 +58,20 @@ body > section:first-of-type [data-bss-parallax-bg] .text-center {
 body > section:first-of-type [data-bss-parallax-bg] .btn {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.rr-hero-cta {
+  align-items: center;
+  display: inline-flex !important;
+  justify-content: center;
+  line-height: 1.1;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: min(100%, 1680px);
+  padding-left: clamp(1.25rem, 2.4vw, 2.25rem);
+  padding-right: clamp(1.25rem, 2.4vw, 2.25rem);
+  text-align: center;
+  white-space: normal;
 }
 
 .rr-testimonials {
@@ -215,6 +242,25 @@ body > section:first-of-type [data-bss-parallax-bg] .btn {
   animation-delay: 260ms;
 }
 
+/* Replace the broken decorative quote glyph with a clean review-card accent. */
+.rr-testimonial-card::before {
+  background: #ff931e !important;
+  border-radius: 999px !important;
+  color: transparent !important;
+  content: "" !important;
+  font-size: 0 !important;
+  height: 4px !important;
+  left: clamp(1.25rem, 2.3vw, 1.9rem) !important;
+  line-height: 0 !important;
+  position: absolute !important;
+  right: clamp(1.25rem, 2.3vw, 1.9rem) !important;
+  top: 1.05rem !important;
+}
+
+.rr-testimonial-quote {
+  padding-top: 0.9rem;
+}
+
 @keyframes rrSlideRight {
   from {
     opacity: 0;
@@ -228,6 +274,10 @@ body > section:first-of-type [data-bss-parallax-bg] .btn {
 }
 
 @media (max-width: 991.98px) {
+  body {
+    padding-top: 88px;
+  }
+
   .rr-testimonial-card {
     min-height: 260px;
   }

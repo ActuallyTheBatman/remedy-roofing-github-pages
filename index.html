@@ -109,6 +109,33 @@ function gtag_report_conversion(url) {
             margin-right: auto !important;
         }
 
+        body {
+            padding-top: 96px !important;
+        }
+
+        .navbar.sticky-top {
+            left: 0 !important;
+            position: fixed !important;
+            right: 0 !important;
+            top: 0 !important;
+            width: 100% !important;
+            z-index: 1030 !important;
+        }
+
+        .rr-hero-cta {
+            align-items: center !important;
+            display: inline-flex !important;
+            justify-content: center !important;
+            line-height: 1.1 !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            max-width: min(100%, 1680px) !important;
+            padding-left: clamp(1.25rem, 2.4vw, 2.25rem) !important;
+            padding-right: clamp(1.25rem, 2.4vw, 2.25rem) !important;
+            text-align: center !important;
+            white-space: normal !important;
+        }
+
         .rr-testimonial-grid > .col {
             align-items: stretch !important;
             display: flex !important;
@@ -119,6 +146,24 @@ function gtag_report_conversion(url) {
             min-height: 330px !important;
         }
 
+        .rr-testimonial-card::before {
+            background: #ff931e !important;
+            border-radius: 999px !important;
+            color: transparent !important;
+            content: "" !important;
+            font-size: 0 !important;
+            height: 4px !important;
+            left: clamp(1.25rem, 2.3vw, 1.9rem) !important;
+            line-height: 0 !important;
+            position: absolute !important;
+            right: clamp(1.25rem, 2.3vw, 1.9rem) !important;
+            top: 1.05rem !important;
+        }
+
+        .rr-testimonial-quote {
+            padding-top: 0.9rem !important;
+        }
+
         .rr-google-review-wrap {
             display: flex !important;
             justify-content: center !important;
@@ -126,6 +171,10 @@ function gtag_report_conversion(url) {
         }
 
         @media (max-width: 991.98px) {
+            body {
+                padding-top: 88px !important;
+            }
+
             .rr-testimonial-card {
                 min-height: 260px !important;
             }
@@ -192,7 +241,7 @@ function gtag_report_conversion(url) {
             <div class="container h-100">
                 <div class="row h-100">
                     <div class="col-md-10 col-lg-10 col-xl-10 offset-md-1 offset-lg-1 offset-xl-1 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
-                        <div class="text-center"><a class="btn btn-primary btn-lg me-2 swing animated" role="button" href="#contact-section" style="border-radius: 0px;border-width: 2px;border-style: solid;font-family: Bungee, serif;color: #ffffff;font-size: 1.8rem;">GET YOUR FREE ROOF INSPECTION TODAY!</a>
+                        <div class="text-center"><a class="btn btn-primary btn-lg rr-hero-cta swing animated" role="button" href="#contact-section" style="border-radius: 0px;border-width: 2px;border-style: solid;font-family: Bungee, serif;color: #ffffff;font-size: 1.8rem;">GET YOUR FREE ROOF INSPECTION TODAY!</a>
                             <h1 class="text-uppercase fw-bold" style="text-align: center;color: rgb(255,255,255);text-shadow: 1px 1px 11px rgb(18,18,18);font-family: Bungee, serif;font-style: italic;font-size: 1.2rem;padding: 10px;">SERVING LEXINGTON, KY &amp; SURROUNDING AREAS</h1>
                         </div>
                     </div>
