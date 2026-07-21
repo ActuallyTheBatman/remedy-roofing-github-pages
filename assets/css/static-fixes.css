@@ -28,13 +28,17 @@ footer {
 /* Keep the homepage hero CTA centered like the original design. */
 body > section:first-of-type [data-bss-parallax-bg] .row > div {
   display: flex !important;
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
   justify-content: center !important;
   align-items: center !important;
   text-align: center !important;
 }
 
 body > section:first-of-type [data-bss-parallax-bg] .text-center {
-  width: 100%;
+  width: auto !important;
   text-align: center !important;
 }
 
