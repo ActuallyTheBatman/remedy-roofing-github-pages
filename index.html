@@ -130,6 +130,35 @@ function gtag_report_conversion(url) {
                 min-height: 260px !important;
             }
         }
+
+        .rr-footer-top {
+            align-items: stretch !important;
+            display: grid !important;
+            gap: 1rem !important;
+            grid-template-columns: minmax(190px, 0.85fr) minmax(280px, 1.35fr) minmax(240px, 1fr) !important;
+        }
+
+        .rr-footer-card {
+            min-height: 190px !important;
+        }
+
+        .rr-footer-credentials img {
+            height: auto !important;
+            max-height: 118px !important;
+            max-width: min(210px, 100%) !important;
+            object-fit: contain !important;
+        }
+
+        .rr-footer-brand img {
+            max-width: 190px !important;
+            width: 100% !important;
+        }
+
+        @media (max-width: 991.98px) {
+            .rr-footer-top {
+                grid-template-columns: 1fr !important;
+            }
+        }
     </style>
 </head>
 
