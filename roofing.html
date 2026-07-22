@@ -172,7 +172,8 @@ function gtag_report_conversion(url) {
                 display: inline-flex !important;
                 flex-shrink: 0 !important;
                 font-family: Bungee, serif !important;
-                font-size: 0.82rem !important;
+                font-size: clamp(0.95rem, 4vw, 1.08rem) !important;
+                font-weight: bold !important;
                 justify-content: center !important;
                 line-height: 1 !important;
                 margin: 0 !important;
@@ -181,15 +182,26 @@ function gtag_report_conversion(url) {
             }
 
             .rr-mobile-nav-toggle {
+                align-items: center !important;
+                background: #ff931e !important;
+                display: inline-flex !important;
+                flex-direction: column !important;
                 flex-shrink: 0 !important;
+                gap: 4px !important;
                 height: 36px !important;
-                padding: 0.2rem 0.35rem !important;
+                justify-content: center !important;
+                overflow: hidden !important;
+                padding: 0 !important;
                 width: 40px !important;
             }
 
-            .rr-mobile-nav-toggle .navbar-toggler-icon {
-                height: 1.25em !important;
-                width: 1.25em !important;
+            .rr-mobile-nav-toggle .rr-menu-bar {
+                background: #ffffff !important;
+                border-radius: 999px !important;
+                display: block !important;
+                flex: 0 0 2px !important;
+                height: 2px !important;
+                width: 22px !important;
             }
 
             .rr-transformations .col {
@@ -217,7 +229,7 @@ function gtag_report_conversion(url) {
 
 <body>
     <nav class="navbar navbar-expand-md sticky-top bg-dark py-3 navbar-dark" style="background: url(&quot;assets/img/wp3718493-black-striped-wallpapers.jpg&quot;) center / auto;border-bottom: 2px solid #ff931e;">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><img src="assets/img/horizontalRR2026Logo.png" alt="RemedyRoofingLexingtonKY" width="200px" height="auto"></a><a class="btn btn-primary rr-mobile-phone d-md-none" href="tel:8598007388">(859) 800-7388</a><button class="navbar-toggler rr-mobile-nav-toggle" data-bs-toggle="collapse" data-bs-target="#navcol-2" style="background: #ff931e;"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><img src="assets/img/horizontalRR2026Logo.png" alt="RemedyRoofingLexingtonKY" width="200px" height="auto"></a><a class="btn btn-primary rr-mobile-phone d-md-none" href="tel:8598007388">(859) 800-7388</a><button class="navbar-toggler rr-mobile-nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navcol-2" aria-controls="navcol-2" aria-expanded="false" aria-label="Open navigation menu"><span class="rr-menu-bar" aria-hidden="true"></span><span class="rr-menu-bar" aria-hidden="true"></span><span class="rr-menu-bar" aria-hidden="true"></span></button>
             <div class="collapse navbar-collapse justify-content-end align-items-md-center" id="navcol-2" style="text-align: right;font-size: 20px;font-family: Ubuntu, sans-serif;text-transform: uppercase;justify-content: flex-end !important;">
                 <a class="btn btn-primary ms-md-auto me-md-3 mb-3 mb-md-0 swing animated d-none d-md-inline-flex" role="button" href="tel:8598007388" style="font-family: Bungee, serif;font-size: 24px;font-weight: bold;padding: 0.55rem 1rem;margin-left: auto !important;border-radius: 0px;border-width: 2px;border-style: solid;color: #ffffff;">(859) 800-7388</a>
                 <ul class="navbar-nav">
