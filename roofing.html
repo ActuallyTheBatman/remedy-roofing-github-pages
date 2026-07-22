@@ -144,6 +144,26 @@ function gtag_report_conversion(url) {
 
         @media (max-width: 767.98px) {
             body { padding-top: 137px !important; }
+
+            .rr-transformations .col {
+                display: flex !important;
+                justify-content: center !important;
+            }
+
+            .rr-transformations .col > a {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .rr-transformations .col img {
+                display: block !important;
+                height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                object-fit: contain !important;
+                object-position: center center !important;
+                width: 100% !important;
+            }
         }
     </style>
 </head>
@@ -223,7 +243,7 @@ function gtag_report_conversion(url) {
             </div>
         </div>
     </section>
-    <section class="py-4 py-xl-5">
+    <section class="py-4 py-xl-5 rr-transformations">
         <div class="container-fluid p-0">
             <div class="row g-0 mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
