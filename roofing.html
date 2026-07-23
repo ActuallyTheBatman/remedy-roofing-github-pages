@@ -199,6 +199,10 @@ function gtag_report_conversion(url) {
             display: none;
         }
 
+        .rr-mobile-ba-modal {
+            display: none !important;
+        }
+
         .rr-proof-item {
             align-items: center !important;
             display: inline-flex !important;
@@ -520,6 +524,83 @@ function gtag_report_conversion(url) {
                 object-position: center center !important;
                 width: 100% !important;
             }
+
+            body.rr-ba-modal-open {
+                overflow: hidden !important;
+            }
+
+            .rr-mobile-ba-modal.is-open {
+                align-items: center !important;
+                background: rgba(0, 0, 0, 0.94) !important;
+                display: flex !important;
+                inset: 0 !important;
+                justify-content: center !important;
+                padding: 4.5rem 0.75rem 3.5rem !important;
+                position: fixed !important;
+                z-index: 2000 !important;
+            }
+
+            .rr-mobile-ba-modal img {
+                border-radius: 0.75rem !important;
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4) !important;
+                display: block !important;
+                height: auto !important;
+                max-height: calc(100dvh - 8rem) !important;
+                max-width: 100% !important;
+                object-fit: contain !important;
+                touch-action: pinch-zoom !important;
+                width: auto !important;
+            }
+
+            .rr-mobile-ba-label {
+                background: #ff931e !important;
+                border-radius: 999px !important;
+                color: #ffffff !important;
+                font-weight: 700 !important;
+                left: 50% !important;
+                padding: 0.4rem 0.9rem !important;
+                position: absolute !important;
+                top: 1rem !important;
+                transform: translateX(-50%) !important;
+            }
+
+            .rr-mobile-ba-close,
+            .rr-mobile-ba-arrow {
+                align-items: center !important;
+                background: #ff931e !important;
+                border: 2px solid #ffffff !important;
+                color: #ffffff !important;
+                display: flex !important;
+                justify-content: center !important;
+                position: absolute !important;
+                z-index: 2 !important;
+            }
+
+            .rr-mobile-ba-close {
+                border-radius: 50% !important;
+                font-size: 1.6rem !important;
+                height: 2.75rem !important;
+                line-height: 1 !important;
+                right: 0.75rem !important;
+                top: 0.75rem !important;
+                width: 2.75rem !important;
+            }
+
+            .rr-mobile-ba-arrow {
+                border-radius: 50% !important;
+                font-size: 2.6rem !important;
+                height: 3.75rem !important;
+                line-height: 1 !important;
+                right: 0.75rem !important;
+                top: 50% !important;
+                transform: translateY(-50%) !important;
+                width: 3.75rem !important;
+            }
+
+            .rr-mobile-ba-arrow.is-back {
+                left: 0.75rem !important;
+                right: auto !important;
+            }
         }
     </style>
 
@@ -719,7 +800,7 @@ function gtag_report_conversion(url) {
                 </div>
             </div>
             <div class="row g-0 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center" data-bss-baguettebox="">
-                <div class="col"><a href="assets/img/LexingtonB&A_2.jpg"><img class="img-fluid object-fit-contain rounded h-100" width="1920" height="954" src="assets/img/LexingtonB&A_2.jpg" style="border-radius: 25px;border: 1px solid #a2abb3 ;"><span class="rr-transformation-location">Lexington, KY</span></a></div>
+                <div class="col"><a class="rr-mobile-ba-trigger" href="assets/img/LexingtonB&A_2.jpg" data-before-image="assets/img/Lexington3Before.JPG" data-after-image="assets/img/Lexington3After.JPG" aria-label="View full-resolution Lexington before and after photos"><img class="img-fluid object-fit-contain rounded h-100" width="1920" height="954" src="assets/img/LexingtonB&A_2.jpg" style="border-radius: 25px;border: 1px solid #a2abb3 ;"><span class="rr-transformation-location">Lexington, KY</span></a></div>
                 <div class="col"><a href="assets/img/LexingtonB&A_3.jpg"><img class="img-fluid object-fit-contain rounded h-100" width="1920" height="954" src="assets/img/LexingtonB&A_3.jpg" style="border-radius: 25px;border: 1px solid #a2abb3 ;"><span class="rr-transformation-location">Lexington, KY</span></a></div>
                 <div class="col"><a href="assets/img/WinchesterB&A.jpg"><img class="img-fluid object-fit-contain rounded h-100" width="1920" height="954" src="assets/img/WinchesterB&A.jpg" style="border-radius: 25px;border: 1px solid #a2abb3 ;"><span class="rr-transformation-location">Winchester, KY</span></a></div>
                 <div class="col"><a href="assets/img/RichmondB&A.jpg"><img class="img-fluid object-fit-contain rounded h-100" width="1920" height="954" src="assets/img/RichmondB&A.jpg" style="border-radius: 25px;border: 1px solid #a2abb3 ;"><span class="rr-transformation-location">Richmond, KY</span></a></div>
@@ -729,6 +810,12 @@ function gtag_report_conversion(url) {
             </div>
         </div>
     </section>
+    <div class="rr-mobile-ba-modal" id="rr-mobile-ba-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Lexington roof before and after photos">
+        <span class="rr-mobile-ba-label">Before</span>
+        <button class="rr-mobile-ba-close" type="button" aria-label="Close before and after viewer">×</button>
+        <img alt="Lexington roof before replacement">
+        <button class="rr-mobile-ba-arrow" type="button" aria-label="Show full-resolution after photo">›</button>
+    </div>
     <hr style="border-color: #ff931e;">
     <div class="container py-4 py-xl-5">
         <div class="row mb-5">
@@ -986,6 +1073,88 @@ function gtag_report_conversion(url) {
     </section>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/script.min.js"></script>
-<script src="assets/js/static-contact.js"></script></body>
+    <script src="assets/js/static-contact.js"></script>
+    <script>
+        (function () {
+            const trigger = document.querySelector(".rr-mobile-ba-trigger");
+            const modal = document.getElementById("rr-mobile-ba-modal");
+
+            if (!trigger || !modal) {
+                return;
+            }
+
+            const image = modal.querySelector("img");
+            const label = modal.querySelector(".rr-mobile-ba-label");
+            const closeButton = modal.querySelector(".rr-mobile-ba-close");
+            const arrowButton = modal.querySelector(".rr-mobile-ba-arrow");
+            const mobileQuery = window.matchMedia("(max-width: 767.98px)");
+            let showingAfter = false;
+
+            function renderPhoto() {
+                image.src = showingAfter ? trigger.dataset.afterImage : trigger.dataset.beforeImage;
+                image.alt = showingAfter ? "Lexington roof after replacement" : "Lexington roof before replacement";
+                label.textContent = showingAfter ? "After" : "Before";
+                arrowButton.textContent = showingAfter ? "‹" : "›";
+                arrowButton.setAttribute("aria-label", showingAfter ? "Show full-resolution before photo" : "Show full-resolution after photo");
+                arrowButton.classList.toggle("is-back", showingAfter);
+            }
+
+            function openViewer(event) {
+                if (!mobileQuery.matches) {
+                    return;
+                }
+
+                event.preventDefault();
+                event.stopImmediatePropagation();
+                showingAfter = false;
+                renderPhoto();
+                modal.classList.add("is-open");
+                modal.setAttribute("aria-hidden", "false");
+                document.body.classList.add("rr-ba-modal-open");
+                closeButton.focus();
+            }
+
+            function closeViewer() {
+                modal.classList.remove("is-open");
+                modal.setAttribute("aria-hidden", "true");
+                document.body.classList.remove("rr-ba-modal-open");
+                image.removeAttribute("src");
+                trigger.focus();
+            }
+
+            trigger.addEventListener("click", openViewer, true);
+            closeButton.addEventListener("click", closeViewer);
+            arrowButton.addEventListener("click", function () {
+                showingAfter = !showingAfter;
+                renderPhoto();
+            });
+            modal.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    closeViewer();
+                }
+            });
+            document.addEventListener("keydown", function (event) {
+                if (!modal.classList.contains("is-open")) {
+                    return;
+                }
+
+                if (event.key === "Escape") {
+                    closeViewer();
+                } else if (event.key === "ArrowRight" && !showingAfter) {
+                    showingAfter = true;
+                    renderPhoto();
+                } else if (event.key === "ArrowLeft" && showingAfter) {
+                    showingAfter = false;
+                    renderPhoto();
+                }
+            });
+            mobileQuery.addEventListener("change", function (event) {
+                if (!event.matches && modal.classList.contains("is-open")) {
+                    closeViewer();
+                }
+            });
+        }());
+    </script>
+</body>
 
 </html>
