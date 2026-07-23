@@ -160,6 +160,27 @@ function gtag_report_conversion(url) {
             }
         }
 
+        .rr-process-row > [class*="col-"] {
+            align-items: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            text-align: center !important;
+        }
+
+        .rr-process-row > [class*="col-"] img {
+            display: block !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .rr-process-row > [class*="col-"] p {
+            margin-left: auto !important;
+            margin-right: auto !important;
+            text-align: center !important;
+            width: 100% !important;
+        }
+
         .rr-local-shield path:first-child {
             fill: #000000 !important;
         }
@@ -769,7 +790,7 @@ function gtag_report_conversion(url) {
         <h2 class="text-center" id="process" style="font-weight: bold;margin: 12px;">Our Roof Replacement Process</h2>
     </section>
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center rr-process-row">
             <div class="col-md-3 text-center" style="border-radius: 25px;border: 1px dotted var(--bs-secondary) ;"><img class="m-2" src="assets/img/inspection_color.png" width="50px" height="auto">
                 <p style="font-weight: bold;">1. Free Inspection</p>
                 <p style="font-size: 0.9rem;">We inspect your roof and provide an honest assessment</p>
@@ -789,7 +810,7 @@ function gtag_report_conversion(url) {
         </div>
     </div>
     <div class="container">
-        <div class="row justify-content-center rr-process-final-row">
+        <div class="row justify-content-center rr-process-row rr-process-final-row">
             <div class="col-md-3 text-center" style="border-radius: 25px;border: 1px dotted var(--bs-secondary) ;"><img class="m-2" src="assets/img/hammer_color.png" width="50px" height="auto">
                 <p style="font-weight: bold;">5.) Roof Installation</p>
                 <p style="font-size: 0.9rem;">Our expert crew installs your new roof with precision and care.</p>
