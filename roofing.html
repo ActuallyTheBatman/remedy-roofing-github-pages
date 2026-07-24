@@ -192,6 +192,25 @@ function gtag_report_conversion(url) {
             width: 100% !important;
         }
 
+        .rr-why-item {
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .rr-why-column {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            .rr-why-list {
+                display: flex !important;
+                flex: 1 1 auto !important;
+                flex-direction: column !important;
+                justify-content: space-evenly !important;
+                margin-bottom: 0 !important;
+            }
+        }
+
         .rr-local-shield path:first-child {
             fill: #000000 !important;
         }
@@ -876,9 +895,9 @@ function gtag_report_conversion(url) {
                 <p>Severe weather can cause serious roof damage that isn't always visible from the ground. Remedy Roofing provides fast inspections, emergency tarping, and full support with your insurance claim.</p><img class="rounded w-100 rr-rounded-feature-image rr-storm-section-image" src="assets/img/houseduringstorm.jpg">
                 <p style="margin-top: 12px;"><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;Free storm damage inspections<br><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;Insurance claim guidance<br><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;We work for YOU, not the insurance company</p>
             </div>
-            <div class="col-md-6" style="border-left: 1px dotted var(--bs-secondary) ;">
+            <div class="col-md-6 rr-why-column" style="border-left: 1px dotted var(--bs-secondary) ;">
                 <h3 style="font-weight: bold;">Why Homeowners Choose Remedy Roofing</h3>
-                <p class="lead lh-lg"><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;Local Lexington roofing company<br><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;5-star rated by homeowners like you<br><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;Fully lincensed &amp; insured<br><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;High-quality materials and workmanship<br><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;Clear communication<br><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;On-time &amp; on-budget<br><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;Strong warranties<br><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;100% satisfaction commitment</p>
+                <p class="lead lh-lg rr-why-list"><span class="rr-why-item"><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;Local Lexington roofing company</span><span class="rr-why-item"><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;5-star rated by homeowners like you</span><span class="rr-why-item"><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;Fully lincensed &amp; insured</span><span class="rr-why-item"><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;High-quality materials and workmanship</span><span class="rr-why-item"><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;Clear communication</span><span class="rr-why-item"><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;On-time &amp; on-budget</span><span class="rr-why-item"><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;Strong warranties</span><span class="rr-why-item"><i class="fa fa-check-circle fs-5" style="color: rgb(255,147,30);"></i>&nbsp;100% satisfaction commitment</span></p>
             </div>
         </div>
     </div>
