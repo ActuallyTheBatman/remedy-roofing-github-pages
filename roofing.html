@@ -94,6 +94,12 @@ function gtag_report_conversion(url) {
         }
 
         @media (min-width: 768px) {
+            .rr-desktop-content-shell {
+                margin-left: auto !important;
+                margin-right: auto !important;
+                max-width: 720px !important;
+            }
+
             .rr-roofing-hero-row {
                 align-items: stretch !important;
             }
@@ -111,7 +117,7 @@ function gtag_report_conversion(url) {
                 height: auto !important;
                 left: 12px !important;
                 max-height: calc(100% - 24px) !important;
-                max-width: calc(100% - 36px) !important;
+                max-width: calc(100% - 8.333333vw) !important;
                 object-fit: contain !important;
                 object-position: center center !important;
                 position: absolute !important;
@@ -159,6 +165,24 @@ function gtag_report_conversion(url) {
 
             .rr-process-final-row {
                 justify-content: center !important;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .rr-desktop-content-shell {
+                max-width: 960px !important;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .rr-desktop-content-shell {
+                max-width: 1140px !important;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .rr-desktop-content-shell {
+                max-width: 1320px !important;
             }
         }
 
@@ -682,7 +706,7 @@ function gtag_report_conversion(url) {
     </section>
     <section>
         <h2 class="text-center" id="roofing-services" style="font-weight: bold;margin: 12px;">Our Roofing Services</h2>
-        <div class="container-fluid" style="padding: 0px;">
+        <div class="container-fluid rr-desktop-content-shell" style="padding: 0px;">
             <div class="row g-0 justify-content-center rr-services-grid" style="margin: 0px;position: relative;padding-right: 5px;padding-left: 5px;">
                 <div class="col" style="border-radius: 25px;text-align: center;padding: 8px;margin: 3px;border: 1px dotted var(--bs-secondary) ;"><img src="assets/img/hammer_color.png" width="50px" height="auto" style="margin: 5px;">
                     <p style="font-weight: bold;">Roof Repair</p>
@@ -712,7 +736,7 @@ function gtag_report_conversion(url) {
         </div>
     </section>
     <section class="py-4 py-xl-5 rr-transformations">
-        <div class="container-fluid p-0">
+        <div class="container-fluid p-0 rr-desktop-content-shell">
             <div class="row g-0 mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
                     <h2 style="font-weight: bold;">Recent Roof Transformations</h2>
